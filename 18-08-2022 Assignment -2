@@ -1,0 +1,22 @@
+int main()
+{
+  int i,a[10],sum=0,n,f=1;
+  printf("how many numbers you want to enter:");
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+  {
+      scanf("%d",&a[i]);
+  }
+  for(i=0;i<n;i++)
+  {
+      f=1;
+      while(a[i]>0)
+      {
+          f=f*a[i];
+          a[i]--;
+      }
+      sum+=f;
+  }
+  printf("%d",sum);
+    return 0;
+}
