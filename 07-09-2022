@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    int n,t1=0,t2=1,t3,indicator=0,i=2,a[50];
+    scanf("%d",&n);
+    a[0]=t1;
+    a[1]=t2;
+    t3=t1+t2;
+    while(t3<=n)
+    {
+        a[i]=t3;
+        i++;
+        t1=t2;
+        t2=t3;
+        t3=t1+t2;
+    }
+    for(i=0;i<=n;i++)
+    {
+        if(a[i]==n)
+        {
+            indicator=1;
+            break;
+        }
+    }
+    if(indicator==1)
+       printf("YES");
+    else
+       printf("NO");
+    return 0;
+}
